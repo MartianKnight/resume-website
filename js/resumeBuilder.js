@@ -28,11 +28,18 @@ $("#main").append(bio["email"]);
 var work = {
   "jobs": [
     {
-      "employer": "test",
-      "title": "all title",
-      "location": "Scotland",
+      "employer": "Future Homes",
+      "title": "Explorer",
+      "location": "Mars",
       "dates": 2013,
-      "description": "fun"
+      "description": "We know"
+    },
+    {
+      "employer": "The 9th Planet",
+      "title": "Navigator",
+      "location": "Pluto",
+      "dates": 2013,
+      "description": "I know"
     }
   ]
 }
@@ -94,5 +101,25 @@ var education = {
   ]
 }
 
-var formattedEducationName = HTMLschoolName.replace("%data%", education.name);
-$("#education").append(formattedEducationName);
+$("#header").append(HTMLskillsStart);
+
+for (skill in bio.skills) {
+  var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
+  $("#skills").append(formattedSkill);
+}
+
+for (job in work.jobs) {
+  $("#workExperience").append(HTMLworkStart);
+
+  var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+  var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+  var formattedEmployerTitle = formattedEmployer + formattedTitle;
+
+  var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+  var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+  var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+
+  $(".work-entry:last").append(formattedEmployerTitle);
+  $(".work-entry:last").append(formattedDates);
+  $(".work-entry:last").append(formattedDescription);
+}
