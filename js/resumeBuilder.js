@@ -1,8 +1,5 @@
-var education = {};
-education["name"] = "nove";
 
-$("#main").append(education.name);
-
+$("#main").append(internationalizeButton);
 
 
 var name = "MartianKnight";
@@ -57,7 +54,7 @@ var projects = {
 
 // Bio
 var bio = {
-  "name": "MartianKnight",
+  "name": "Martian Knight",
   "role": "front-end",
   "welcomeMessage": "Afternoon Naps",
   "contacts": {
@@ -101,25 +98,42 @@ var education = {
   ]
 }
 
-$("#header").append(HTMLskillsStart);
+function displayBio() {
+  $("#header").append(HTMLskillsStart);
 
-for (skill in bio.skills) {
-  var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
-  $("#skills").append(formattedSkill);
+  for (skill in bio.skills) {
+    var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
+    $("#skills").append(formattedSkill);
+  }
 }
 
-for (job in work.jobs) {
-  $("#workExperience").append(HTMLworkStart);
+displayBio();
 
-  var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-  var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-  var formattedEmployerTitle = formattedEmployer + formattedTitle;
+function displayWork() {
+  for (job in work.jobs) {
+    $("#workExperience").append(HTMLworkStart);
 
-  var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-  var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-  var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+    var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+    var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+    var formattedEmployerTitle = formattedEmployer + formattedTitle;
 
-  $(".work-entry:last").append(formattedEmployerTitle);
-  $(".work-entry:last").append(formattedDates);
-  $(".work-entry:last").append(formattedDescription);
+    var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+    var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+    var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+
+    $(".work-entry:last").append(formattedEmployerTitle);
+    $(".work-entry:last").append(formattedDates);
+    $(".work-entry:last").append(formattedDescription);
+  }
+}
+
+displayWork();
+
+function inName(name) {
+  var name = bio.name;
+  var nameParts = name.split(" ");
+  nameParts[0] = nameParts[0].charAt(0).toUpperCase() + nameParts[0].slice(1);
+  nameParts[1] = nameParts[1].toUpperCase();
+  name = nameParts.join(" ");
+  return name;
 }
