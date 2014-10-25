@@ -27,14 +27,14 @@ var work = {
     {
       "employer": "Future Homes",
       "title": "Explorer",
-      "location": "Mars",
+      "location": "Charlotte, NC",
       "dates": 2013,
       "description": "We know"
     },
     {
       "employer": "The 9th Planet",
       "title": "Navigator",
-      "location": "Pluto",
+      "location": "Raleigh, NC",
       "dates": 2013,
       "description": "I know"
     }
@@ -45,9 +45,16 @@ var work = {
 var projects = {
   "projects": [
     {
-      "title": "yes",
+      "title": "not the truth",
       "dates": 2013,
-      "description": "fun"
+      "description": "fun",
+      "image": ""
+    },
+    {
+      "title": "the true",
+      "dates": 2013,
+      "description": "fun",
+      "image": ""
     }
   ]
 }
@@ -62,7 +69,7 @@ var bio = {
     "email": "example@email.com",
     "github": "MartianKnight",
     "twitter": "@yes",
-    "location": "Mars"
+    "location": "Charlotte, NC"
   },
   "skills": ["Awesome","Sleepy"]
 }
@@ -72,15 +79,15 @@ var education = {
   "schools": [
     {
       "name": "UNCC",
-      "location": "Charlotte",
+      "location": "Charlotte, NC",
       "degree": "BS",
       "majors": ["CS"],
       "dates": 2009,
       "url": "http://example.com"
     },
     {
-      "name": "Udacity",
-      "location": "Online",
+      "name": "Georgia Tech",
+      "location": "Atlanta, GA",
       "degree": "BS",
       "majors": ["CS"],
       "dates": 2014,
@@ -132,8 +139,28 @@ displayWork();
 function inName(name) {
   var name = bio.name;
   var nameParts = name.split(" ");
-  nameParts[0] = nameParts[0].charAt(0).toUpperCase() + nameParts[0].slice(1);
+  nameParts[0] = nameParts[0].charAt(0).toUpperCase() + nameParts[0].slice(1).toLowerCase();
   nameParts[1] = nameParts[1].toUpperCase();
   name = nameParts.join(" ");
   return name;
 }
+
+projects.display = function() {
+  for (project in projects.projects) {
+    $("#projects").append(HTMLprojectStart);
+
+    var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+    var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+    var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+    var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].description);
+
+
+    $(".project-entry:last").append(formattedTitle);
+    $(".project-entry:last").append(formattedDates);
+    $(".project-entry:last").append(formattedDescription);
+  }
+}
+
+projects.display();
+
+$("#mapDiv").append(googleMap);
