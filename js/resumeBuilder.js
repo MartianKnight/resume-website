@@ -105,7 +105,7 @@ var education = {
   ]
 }
 
-function displayBio() {
+bio.display = function() {
   $("#header").append(HTMLskillsStart);
 
   for (skill in bio.skills) {
@@ -114,9 +114,9 @@ function displayBio() {
   }
 }
 
-displayBio();
+bio.display();
 
-function displayWork() {
+work.display = function() {
   for (job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
 
@@ -134,7 +134,7 @@ function displayWork() {
   }
 }
 
-displayWork();
+work.display();
 
 function inName(name) {
   var name = bio.name;
