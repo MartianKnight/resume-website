@@ -1,14 +1,4 @@
-
 $("#main").append(internationalizeButton);
-
-
-var name = "MartianKnight";
-var formattedName = HTMLheaderName.replace("%data%", name);
-var role = "Front-End Ninja";
-var formattedRole = HTMLheaderRole.replace("%data%", role);
-
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
 
 // dot object notation
 /*
@@ -119,15 +109,57 @@ var bio = {
     "twitter": "@yes",
     "location": "Charlotte, NC"
   },
-  "skills": ["Awesome","Sleepy"]
+  "skills": ["Awesome","Sleepy","More"]
 }
 bio.display = function() {
-  $("#header").append(HTMLskillsStart);
+  // Header
+  var formattedName = HTMLheaderName.replace("%data%", bio.name);
+  var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+  var formattedMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+  var formattedPic = HTMLbioPic.replace("%data%", bio.contacts.picture);
+  $("#header").prepend(formattedMessage);
+  $("#header").prepend(formattedRole);
+  $("#header").prepend(formattedName);
 
-  for (skill in bio.skills) {
-    var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
-    $("#skills").append(formattedSkill);
+  // Contacts
+  //$("#footerContacts").append(HTMLcontactGeneric);
+  var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+  var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+  var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+  var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+  var formattedBlog = HTMLblog.replace("%data%", bio.contacts.blog);
+  var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+
+  var idStrings = ["#topContacts", "#footerContacts"];
+  for (var i=0, id; id=idStrings[i]; i++) {
+    $(id).append(formattedMobile);
+    $(id).append(formattedEmail);
+    $(id).append(formattedTwitter);
+    $(id).append(formattedGithub);
+    $(id).append(formattedBlog);
+    $(id).append(formattedLocation);
   }
+
+  $("#header").append(HTMLskillsStart);
+  $("#skillsChart").append(HTMLskillsList);
+  //$("#skillsChart").append(HTMLskillsStart);
+  for (var i=0; i < bio.skills.length; i++) {
+    var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
+
+    $("#skills").append(formattedSkill);
+    /*
+    console.log(formattedSkill);
+
+    var idStrings = ["#skills", "#skillsList"];
+    for (var i=0, id; id=idStrings[i]; i++) {
+      $(id).append(formattedSkill);
+      console.log("in loop" + i);
+    }
+    */
+  }
+
+  //var HTMLcontactGeneric = "<li class='flex-item'><span class='orange-text'>%contact%</span><span class='white-text'>%data%</span></li>";
+
 }
 
 bio.display();
