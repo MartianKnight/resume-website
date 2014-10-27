@@ -22,15 +22,22 @@ var work = {
       "employer": "Future Homes",
       "title": "Explorer",
       "location": "Charlotte, NC",
-      "dates": 2013,
-      "description": "We know"
+      "dates": 2014,
+      "description": "Mobile Apps"
     },
     {
       "employer": "The 9th Planet",
       "title": "Navigator",
       "location": "Raleigh, NC",
       "dates": 2013,
-      "description": "I know"
+      "description": "Website Dashboard"
+    },
+    {
+      "employer": "The 9th Planet",
+      "title": "Intern",
+      "location": "Raleigh, NC",
+      "dates": 2012,
+      "description": "Performance Testing in Powershell"
     }
   ]
 }
@@ -48,6 +55,7 @@ work.display = function() {
 
     $(".work-entry:last").append(formattedEmployerTitle);
     $(".work-entry:last").append(formattedDates);
+    $(".work-entry:last").append(formattedLocation);
     $(".work-entry:last").append(formattedDescription);
   }
 }
@@ -62,16 +70,22 @@ work.display();
 var projects = {
   "projects": [
     {
-      "title": "not the truth",
-      "dates": 2013,
-      "description": "fun",
-      "image": ""
+      "title": "UNCC Research Lab",
+      "dates": 2011,
+      "description": "Tracking ants",
+      "image": "http://placehold.it/100x100"
     },
     {
-      "title": "the true",
+      "title": "Mens Homeless Shelter",
+      "dates": 2012,
+      "description": "Visual Basic script for volunteer login",
+      "image": "http://placekitten.com/100/100"
+    },
+    {
+      "title": "Built lab",
       "dates": 2013,
       "description": "fun",
-      "image": ""
+      "image": "http://placepuppy.it/100/100"
     }
   ]
 }
@@ -83,7 +97,6 @@ projects.display = function() {
     var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
     var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
     var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].description);
-
 
     $(".project-entry:last").append(formattedTitle);
     $(".project-entry:last").append(formattedDates);
@@ -106,10 +119,10 @@ var bio = {
     "mobile": "555",
     "email": "example@email.com",
     "github": "MartianKnight",
-    "twitter": "@yes",
+    "twitter": "@AfternoonNaps",
     "location": "Charlotte, NC"
   },
-  "skills": ["Awesome","Sleepy","More"]
+  "skills": ["Naps","Sleep","Hammocks", "Closed Eyes"]
 }
 bio.display = function() {
   // Header
@@ -188,7 +201,7 @@ var education = {
       "url": "http://www.gatech.edu/"
     }
   ]
-,
+  ,
   "onlineCourses": [
     {
       "title": "JavaScript Basics",
