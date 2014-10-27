@@ -1,7 +1,8 @@
-$("#main").append(internationalizeButton);
-
-// dot object notation
 /*
+---------------
+  NOTES SECTION
+---------------
+// dot object notation
 bio.city = "Mountain View";
 $("#main").append(bio.city);
 
@@ -9,7 +10,6 @@ $("#main").append(bio.city);
 bio["email"] = "test@email.com";
 $("#main").append(bio["email"]);
 */
-
 
 /*
 ---------------
@@ -176,25 +176,49 @@ var education = {
       "location": "Charlotte, NC",
       "degree": "BS",
       "majors": ["CS"],
-      "dates": 2009,
-      "url": "http://example.com"
+      "dates": "2009 - 2012",
+      "url": "http://www.uncc.edu/"
     },
     {
       "name": "Georgia Tech",
       "location": "Atlanta, GA",
       "degree": "BS",
       "majors": ["CS"],
-      "dates": 2014,
-      "url": "http://example.com"
+      "dates": "2015 - Future",
+      "url": "http://www.gatech.edu/"
     }
   ]
 ,
   "onlineCourses": [
     {
-      "title": "ud804",
+      "title": "JavaScript Basics",
       "school": "Udacity",
-      "dates": 2014,
-      "url": "http://example.com"
+      "dates": "October 2014",
+      "url": "https://www.udacity.com/course/ud804"
+    },
+    {
+      "title": "UX Design for Mobile Developers",
+      "school": "Udacity and Google",
+      "dates": "October 2014",
+      "url": "https://www.udacity.com/course/ud849"
+    },
+    {
+      "title": "How to Use Git and GitHub",
+      "school": "Udacity",
+      "dates": "October 2014",
+      "url": "https://www.udacity.com/course/ud775"
+    },
+    {
+      "title": "Intro to HTML and CSS",
+      "school": "Udacity",
+      "dates": "October 2014",
+      "url": "https://www.udacity.com/course/ud304"
+    },
+    {
+      "title": "Object-Oriented JavaScript",
+      "school": "Udacity and Hack Reactor",
+      "dates": "October 2014",
+      "url": "https://www.udacity.com/course/ud015"
     }
   ]
 }
