@@ -280,9 +280,41 @@ education.display();
 ---------------
 */
 var volunteer = {
-  //add json
+  "schools": [
+    {
+      "name": "Habitat for Humanity",
+      "location": "Charlotte, NC",
+      "dates": "2009 - 2012",
+      "url": "http://www.null.com",
+      "description": "This is what i did"
+    },
+    {
+      "name": "Mens Homeless Shelter",
+      "location": "Atlanta, GA",
+      "dates": "2015 - Future",
+      "url": "http://www.gatech.edu/",
+      "description": "This is what i did"
+    },
+    {
+      "name": "Toastmasters",
+      "location": "Atlanta, GA",
+      "dates": "2015 - Future",
+      "url": "http://www.gatech.edu/",
+      "description": "This is what i did"
+    },
+    {
+      "name": "Apparo",
+      "location": "Atlanta, GA",
+      "dates": "2015 - Future",
+      "url": "http://www.gatech.edu/",
+      "description": "This is what i did"
+    }
+  ]
 }
 
+/*
+  Other sections? Awards, Languages
+*/
 
 function inName(name) {
   var name = bio.name;
