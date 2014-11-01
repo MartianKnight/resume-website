@@ -9,6 +9,8 @@ $("#main").append(bio.city);
 // bracket object notation
 bio["email"] = "test@email.com";
 $("#main").append(bio["email"]);
+
+// What is the last object notation?
 */
 
 /*
@@ -122,7 +124,7 @@ var bio = {
     "twitter": "@AfternoonNaps",
     "location": "Charlotte, NC"
   },
-  "skills": ["Naps","Sleep","Hammocks", "Closed Eyes"]
+  "skills": ["Naps","Sleep","Hammocks","Closed Eyes"]
 }
 bio.display = function() {
   // Header
@@ -271,6 +273,16 @@ education.display = function() {
 }
 
 education.display();
+
+/*
+---------------
+  VOLUNTEER SECTION
+---------------
+*/
+var volunteer = {
+  //add json
+}
+
 
 function inName(name) {
   var name = bio.name;
