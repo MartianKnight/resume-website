@@ -45,10 +45,11 @@ var HTMLprojectDescription = "<p><br>%data%</p>";
 var HTMLprojectImage = "<img src='%data%'>";
 
 // Volunteer Section added
-var HTMLVolunteerStart = "<div class='project-entry'></div>";
-var HTMLVolunteerTitle = "<a href='#'>%data%</a>";
-var HTMLVolunteerDates = "<div class='date-text'>%data%</div>";
-var HTMLVolunteerDescription = "<p><br>%data%</p>";
+var HTMLvolunteerStart = "<div class='volunteer-entry'></div>";
+var HTMLvolunteerName = "<a href='%url%'>%data%</a>";
+var HTMLvolunteerDates = "<div class='date-text'>%data%</div>";
+var HTMLvolunteerLocation = "<div class='location-text'>%data%</div>";
+var HTMLvolunteerDescription = "<p><br>%data%</p>";
 
 var HTMLschoolStart = "<div class='education-entry'></div>";
 // Added %url% to plug into
