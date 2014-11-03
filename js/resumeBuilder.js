@@ -280,7 +280,7 @@ education.display();
 ---------------
 */
 var volunteer = {
-  "schools": [
+  "organizations": [
     {
       "name": "Habitat for Humanity",
       "location": "Charlotte, NC",
@@ -311,6 +311,27 @@ var volunteer = {
     }
   ]
 }
+
+volunteer.display = function() {
+  // Volunteer
+  $("#volunteer").append(HTMLvolunteerStart);
+  for (voluntee in volunteer.organizations) {
+
+    var formattedName = HTMLvolunteerName.replace("%data%", volunteer.organizations[voluntee].title);
+    formattedName = formattedName.replace("%url%", volunteer.organizations[voluntee].url);
+    var formattedDates = HTMLvolunteerDates.replace("%data%", volunteer.organizations[voluntee].dates);
+    var formattedLocation = HTMLvolunteerLocation.replace("%data%", volunteer.organizations[voluntee].location);
+    var formattedDescription = HTMLvolunteerDescription.replace("%data%", volunteer.organizations[voluntee].description);
+
+    $(".volunteer-entry:last").append(formattedName);
+    $(".volunteer-entry:last").append(formattedDates);
+    $(".volunteer-entry:last").append(formattedLocation);
+    $(".volunteer-entry:last").append(formattedDescription);
+  }
+}
+
+volunteer.display();
+
 
 /*
   Other sections? Awards, Languages
