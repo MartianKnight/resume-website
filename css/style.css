@@ -6,7 +6,7 @@
 
 
 
-.education-entry, .work-entry, .project-entry, .online-entry{
+.education-entry, .work-entry, .project-entry, .online-entry, .volunteer-entry{
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -134,6 +134,7 @@ a {
 
 .center-content {
   padding: 5%;
+  padding-bottom: 2%;
 }
 
 ul {
