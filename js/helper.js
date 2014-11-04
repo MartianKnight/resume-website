@@ -1,20 +1,15 @@
 /*
+This file contains all of the code running in the background that makes resumeBuilder.js possible.
 
-This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
-
-Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
-
-Cameron Pittman
-*/
-
-
-/*
-These are HTML strings. As part of the course, you'll be using JavaScript functions
+These are HTML strings. Use JavaScript functions to
 replace the %data% placeholder text you see in them.
 */
+
+// Header
 var HTMLheaderName = "<h1 id='name'>%data%</h1>";
 var HTMLheaderRole = "<span>%data%</span><hr/>";
 
+// Contact Information
 var HTMLcontactGeneric = "<li class='flex-item'><span class='orange-text'>%contact%</span><span class='white-text'>%data%</span></li>";
 var HTMLmobile = "<li class='flex-item'><span class='orange-text'>mobile</span><span class='white-text'>%data%</span></li>";
 var HTMLemail = "<li class='flex-item'><span class='orange-text'>email</span><span class='white-text'>%data%</span></li>";
@@ -23,14 +18,17 @@ var HTMLgithub = "<li class='flex-item'><span class='orange-text'>github</span><
 var HTMLblog = "<li class='flex-item'><span class='orange-text'>blog</span><span class='white-text'>%data%</span></li>";
 var HTMLlocation = "<li class='flex-item'><span class='orange-text'>location</span><span class='white-text'>%data%</span></li>";
 
+// Bio
 var HTMLbioPic = "<img src='%data%' class='biopic'>";
 var HTMLWelcomeMsg = "<span class='welcome-message'>%data%</span>";
 
+// Skills
 var HTMLskillsStart = "<h3 id='skillsH3'>Skills at a Glance:</h3><ul id='skills' class='flex-box'></ul>";
 // Added line to fix issue with seperate skill boxes on the top and bottom
 var HTMLskillsList = "<ul id='skillsList' class='flex-box'></ul>";
 var HTMLskills = "<li class='flex-item'><span class='white-text'>%data%</span></li>";
 
+// Work
 var HTMLworkStart = "<div class='work-entry'></div>";
 var HTMLworkEmployer = "<a href='#'>%data%";
 var HTMLworkTitle = " - %data%</a>";
@@ -38,19 +36,21 @@ var HTMLworkDates = "<div class='date-text'>%data%</div>";
 var HTMLworkLocation = "<div class='location-text'>%data%</div>";
 var HTMLworkDescription = "<p><br>%data%</p>";
 
+// Project
 var HTMLprojectStart = "<div class='project-entry'></div>";
 var HTMLprojectTitle = "<a href='#'>%data%</a>";
 var HTMLprojectDates = "<div class='date-text'>%data%</div>";
 var HTMLprojectDescription = "<p><br>%data%</p>";
 var HTMLprojectImage = "<img src='%data%'>";
 
-// Volunteer Section added
+// Volunteer
 var HTMLvolunteerStart = "<div class='volunteer-entry'></div>";
 var HTMLvolunteerName = "<a href='%url%'>%data%</a>";
 var HTMLvolunteerDates = "<div class='date-text'>%data%</div>";
 var HTMLvolunteerLocation = "<div class='location-text'>%data%</div>";
 var HTMLvolunteerDescription = "<p><br>%data%</p>";
 
+// School
 var HTMLschoolStart = "<div class='education-entry'></div>";
 // Added %url% to plug into
 var HTMLschoolName = "<a href='%url%'>%data%";
@@ -59,6 +59,7 @@ var HTMLschoolDates = "<div class='date-text'>%data%</div>";
 var HTMLschoolLocation = "<div class='location-text'>%data%</div>";
 var HTMLschoolMajor = "<em><br>Major: %data%</em>"
 
+// Online Education
 var HTMLonlineClasses = "<h3>Online Classes</h3>";
 // Added the below line for cleaner look
 var HTMLonlineStart = "<div class='online-entry'></div>";
@@ -68,8 +69,10 @@ var HTMLonlineSchool = " - %data%</a>";
 var HTMLonlineDates = "<div class='date-text'>%data%</div><br>";
 //var HTMLonlineURL = "<br><a href='%data%'>%data%</a>";
 
+// Test Features
 var internationalizeButton = "<button>Internationalize</button>";
 var googleMap = "<div id='map'></div>";
+
 
 
 /*
