@@ -9,6 +9,7 @@
 .education-entry, .work-entry, .project-entry, .online-entry, .volunteer-entry{
   padding-left: 5%;
   padding-right: 5%;
+  background: red;
 }
 
 

@@ -21,21 +21,21 @@ $("#main").append(bio["email"]);
 var work = {
   "jobs": [
     {
-      "employer": "Future Homes",
-      "title": "Explorer",
+      "employer": "Duke Energy",
+      "title": "Mobile Application Developer",
       "location": "Charlotte, NC",
       "dates": 2014,
       "description": "Mobile Apps"
     },
     {
-      "employer": "The 9th Planet",
-      "title": "Navigator",
+      "employer": "Netapp",
+      "title": "Technical Marketing Engineer",
       "location": "Raleigh, NC",
       "dates": 2013,
       "description": "Website Dashboard"
     },
     {
-      "employer": "The 9th Planet",
+      "employer": "Netapp",
       "title": "Intern",
       "location": "Raleigh, NC",
       "dates": 2012,
@@ -283,15 +283,15 @@ var volunteer = {
   "organizations": [
     {
       "name": "Habitat for Humanity",
-      "location": "Charlotte, NC",
-      "dates": "2009 - Future",
+      "location": "Raleigh, NC",
+      "dates": "2013 - 2014",
       "url": "http://www.habitatcharlotte.org/",
       "description": "This is what i did"
     },
     {
       "name": "Citizens School",
       "location": "Charlotte, NC",
-      "dates": "2014 - Future",
+      "dates": "2014",
       "url": "http://www.citizenschools.org/",
       "description": "This is what i did"
     },
@@ -326,7 +326,7 @@ var volunteer = {
     {
       "name": "Assistant Soccer Coach",
       "location": "Charlotte, NC",
-      "dates": "2014 - Future",
+      "dates": "2011 - Future",
       "url": "#",
       "description": "This is what i did"
     }
