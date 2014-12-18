@@ -43,10 +43,13 @@ var work = {
     }
   ]
 }
+
 work.display = function() {
+  // Start manipulating the work json
   for (job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
 
+    // Format data by replacing the %data% in the variables defined inside of helper.js
     var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
     var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
     var formattedEmployerTitle = formattedEmployer + formattedTitle;
@@ -91,10 +94,14 @@ var projects = {
     }
   ]
 }
+
 projects.display = function() {
+  // Start manipulating the projects json
+
   for (project in projects.projects) {
     $("#projects").append(HTMLprojectStart);
 
+    // Format data by replacing the %data% in the variables defined inside of helper.js
     var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
     var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
     var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
@@ -126,7 +133,10 @@ var bio = {
   },
   "skills": ["Naps","Sleep","Hammocks","Closed Eyes"]
 }
+
 bio.display = function() {
+  // Start manipulating the bio json
+
   // Header
   var formattedName = HTMLheaderName.replace("%data%", bio.name);
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -137,7 +147,6 @@ bio.display = function() {
   $("#header").prepend(formattedName);
 
   // Contacts
-  //$("#footerContacts").append(HTMLcontactGeneric);
   var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
   var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
   var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
@@ -145,8 +154,9 @@ bio.display = function() {
   var formattedBlog = HTMLblog.replace("%data%", bio.contacts.blog);
   var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
+  // There are two cases to loop through for contacts
   var idStrings = ["#topContacts", "#footerContacts"];
-  for (var i=0, id; id=idStrings[i]; i++) {
+  for (var i=0, id; id = idStrings[i]; i++) {
     $(id).append(formattedMobile);
     $(id).append(formattedEmail);
     $(id).append(formattedTwitter);
@@ -157,24 +167,12 @@ bio.display = function() {
 
   $("#header").append(HTMLskillsStart);
   $("#skillsChart").append(HTMLskillsList);
-  //$("#skillsChart").append(HTMLskillsStart);
+
   for (var i=0; i < bio.skills.length; i++) {
     var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
 
     $("#skills").append(formattedSkill);
-    /*
-    console.log(formattedSkill);
-
-    var idStrings = ["#skills", "#skillsList"];
-    for (var i=0, id; id=idStrings[i]; i++) {
-      $(id).append(formattedSkill);
-      console.log("in loop" + i);
-    }
-    */
   }
-
-  //var HTMLcontactGeneric = "<li class='flex-item'><span class='orange-text'>%contact%</span><span class='white-text'>%data%</span></li>";
-
 }
 
 bio.display();
@@ -237,10 +235,15 @@ var education = {
     }
   ]
 }
+
 education.display = function() {
-  // Schools
+  // Start manipulating the education json
   $("#education").append(HTMLschoolStart);
+
+  // Grab the school json node
   for (school in education.schools) {
+
+    // Format data by replacing the %data% in the variables defined inside of helper.js
     var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
     formattedName = formattedName.replace("%url%", education.schools[school].url);
     var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
@@ -258,8 +261,11 @@ education.display = function() {
   // Online
   $("#education").append(HTMLonlineClasses);
   $("#education").append(HTMLonlineStart);
+
+  // Grab the online json node
   for (course in education.onlineCourses) {
 
+    // Format data by replacing the %data% in the variables defined inside of helper.js
     var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
     formattedTitle = formattedTitle.replace("%url%", education.onlineCourses[course].url);
     var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
@@ -332,11 +338,13 @@ var volunteer = {
     }
   ]
 }
+
 volunteer.display = function() {
-  // Volunteer
+  // Start manipulating the volunteer json
   $("#volunteer").append(HTMLvolunteerStart);
   for (voluntee in volunteer.organizations) {
 
+    // Format data by replacing the %data% in the variables defined inside of helper.js
     var formattedName = HTMLvolunteerName.replace("%data%", volunteer.organizations[voluntee].name);
     formattedName = formattedName.replace("%url%", volunteer.organizations[voluntee].url);
     var formattedDates = HTMLvolunteerDates.replace("%data%", volunteer.organizations[voluntee].dates);
@@ -352,11 +360,7 @@ volunteer.display = function() {
 
 volunteer.display();
 
-
-/*
-  Other sections? Awards, Languages
-*/
-
+// Change a name to allow different cases
 function inName(name) {
   var name = bio.name;
   var nameParts = name.split(" ");
