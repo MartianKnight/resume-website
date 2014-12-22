@@ -1,16 +1,13 @@
-Website Resume
+P2: Interactive Resume
 ========
 
-This is a simple project using a template from Udacity.
+Project Description:
 
-Some quick notes:
-  JSON objects allow for editing of person details
-  JSON objects are stored in resumeBuilder.js
-  Jquery will sort through the JSON to build the website.
-  If sections are missing in the JSON then the html will not show for those sections
+You'll demonstrate your mastery of the language's syntax through a series of challenges. Each multipart problem mimics a real-life challenge that front-end developers face. You'll be required to write clean code and to apply your knowledge of variables, objects, JSON, functions and control flow to successfully solve the challenges.
 
-Add ons:
-  Take google maps and pull for github connection/linkedin connections
-  Maps should show differently for each (tabs)
+Additions:
 
-=====
+Images for each section
+Volunteer Section
+Changes in helper.js to change formatting
+
