@@ -9,7 +9,13 @@
 .education-entry, .work-entry, .project-entry, .online-entry, .volunteer-entry{
   padding-left: 5%;
   padding-right: 5%;
-  background: red;
+}
+
+.education-entry {
+  background-image: url(../images/fry.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top:5px;
 }
 
 
