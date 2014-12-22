@@ -77,7 +77,7 @@ var projects = {
     {
       "title": "UNCC Research Lab",
       "dates": 2011,
-      "description": "Tracking ants",
+      "description": "Tracked ants in a video frame",
       "image": "http://placehold.it/100x100"
     },
     {
@@ -87,9 +87,9 @@ var projects = {
       "image": "http://placekitten.com/100/100"
     },
     {
-      "title": "Built lab",
-      "dates": 2013,
-      "description": "fun",
+      "title": "NightShift",
+      "dates": 2015,
+      "description": "Worked in a team to created an open source project",
       "image": "http://placepuppy.it/100/100"
     }
   ]
@@ -292,49 +292,42 @@ var volunteer = {
       "location": "Raleigh, NC",
       "dates": "2013 - 2014",
       "url": "http://www.habitatcharlotte.org/",
-      "description": "This is what i did"
+      "description": "Fix up houses"
     },
     {
       "name": "Citizens School",
       "location": "Charlotte, NC",
       "dates": "2014",
       "url": "http://www.citizenschools.org/",
-      "description": "This is what i did"
+      "description": "Taught electricity to middle school kids"
     },
     {
       "name": "Mens Homeless Shelter",
       "location": "Charlotte, NC",
       "dates": "2014 - Future",
       "url": "http://www.mensshelterofcharlotte.org/",
-      "description": "This is what i did"
+      "description": "Help made meals"
     },
     {
       "name": "Toastmasters",
       "location": "Charlotte, NC",
       "dates": "2014 - Future",
       "url": "http://highenergy.toastmastersclubs.org/",
-      "description": "This is what i did"
+      "description": "Engaged in membership drives"
     },
     {
       "name": "Habitat for Young Professionials",
       "location": "Charlotte, NC",
       "dates": "2014 - Future",
       "url": "http://www.hypcharlotte.org/",
-      "description": "This is what i did"
-    },
-    {
-      "name": "Apparo",
-      "location": "Charlotte, NC",
-      "dates": "2014 - Future",
-      "url": "http://www.apparo.org/",
-      "description": "This is what i did"
+      "description": "HYP member"
     },
     {
       "name": "Assistant Soccer Coach",
       "location": "Charlotte, NC",
       "dates": "2011 - Future",
       "url": "#",
-      "description": "This is what i did"
+      "description": "Coach high school and middle school soccer"
     }
   ]
 }
