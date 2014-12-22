@@ -9,15 +9,26 @@
 .education-entry, .work-entry, .project-entry, .online-entry, .volunteer-entry{
   padding-left: 5%;
   padding-right: 5%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .education-entry {
-  background-image: url(../images/fry.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  padding-top:5px;
+  background-image: url(../images/tech.gif);
 }
 
+.work-entry {
+  background-image: url(../images/duke.png);
+}
+
+.project-entry {
+  background-image: url(../images/night.jpg);
+}
+
+.online-entry {
+  background-image: url(../images/udacity.png);
+}
 
 h1 {
 
@@ -126,8 +137,13 @@ a {
 }
 
 /* TODO: Replace with image later */
-#header {
-  background-color: #484848;
+#header {\
+  background-color: black;
+  background-image: url(../images/mars.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
 }
 
 .flex-box {
