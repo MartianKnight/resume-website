@@ -46,8 +46,9 @@ var work = {
 
 work.display = function() {
   // Start manipulating the work json
+  $("#workExperience").append(HTMLworkStart);
   for (job in work.jobs) {
-    $("#workExperience").append(HTMLworkStart);
+
 
     // Format data by replacing the %data% in the variables defined inside of helper.js
     var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -97,9 +98,9 @@ var projects = {
 
 projects.display = function() {
   // Start manipulating the projects json
-
+  $("#projects").append(HTMLprojectStart);
   for (project in projects.projects) {
-    $("#projects").append(HTMLprojectStart);
+
 
     // Format data by replacing the %data% in the variables defined inside of helper.js
     var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
