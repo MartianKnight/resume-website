@@ -1,20 +1,5 @@
 /*
 ---------------
-  NOTES SECTION
----------------
-// dot object notation
-bio.city = "Mountain View";
-$("#main").append(bio.city);
-
-// bracket object notation
-bio["email"] = "test@email.com";
-$("#main").append(bio["email"]);
-
-// What is the last object notation?
-*/
-
-/*
----------------
   WORK SECTION
 ---------------
 */
@@ -48,7 +33,6 @@ work.display = function() {
   // Start manipulating the work json
   $("#workExperience").append(HTMLworkStart);
   for (job in work.jobs) {
-
 
     // Format data by replacing the %data% in the variables defined inside of helper.js
     var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -101,7 +85,6 @@ projects.display = function() {
   $("#projects").append(HTMLprojectStart);
   for (project in projects.projects) {
 
-
     // Format data by replacing the %data% in the variables defined inside of helper.js
     var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
     var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
@@ -136,9 +119,7 @@ var bio = {
 }
 
 bio.display = function() {
-  // Start manipulating the bio json
-
-  // Header
+  // Manipulating the bio json
   var formattedName = HTMLheaderName.replace("%data%", bio.name);
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
   var formattedMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
@@ -147,7 +128,7 @@ bio.display = function() {
   $("#header").prepend(formattedRole);
   $("#header").prepend(formattedName);
 
-  // Contacts
+  // Manipulating the bio.contacts json
   var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
   var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
   var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
@@ -155,7 +136,7 @@ bio.display = function() {
   var formattedBlog = HTMLblog.replace("%data%", bio.contacts.blog);
   var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
-  // There are two cases to loop through for contacts
+  // There are two areas to add the contacts information
   var idStrings = ["#topContacts", "#footerContacts"];
   for (var i=0, id; id = idStrings[i]; i++) {
     $(id).append(formattedMobile);
@@ -171,7 +152,6 @@ bio.display = function() {
 
   for (var i=0; i < bio.skills.length; i++) {
     var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
-
     $("#skills").append(formattedSkill);
   }
 }
